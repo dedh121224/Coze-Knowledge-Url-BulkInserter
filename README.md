@@ -54,6 +54,7 @@ async function performActions(urls) {
         await setUrlAndTriggerClick(url);
         await delay(1300);
         processedCount++;
+        console.log((new Date()).toISOString().slice(11, 19));
         console.log(`Progress: ${processedCount} / ${urlslength} (${(processedCount / urlslength * 100).toFixed(2)}%)`);
     }
 }
